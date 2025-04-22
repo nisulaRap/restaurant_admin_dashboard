@@ -1,0 +1,55 @@
+.layout {
+  display: flex;
+}
+
+.bar {
+  margin-top: 120px;
+  width: 250px;
+  border-top: 2px solid darkgray;
+}
+
+.add {
+    width: 70%;
+    margin-left: max(5vw, 25px);
+    margin-top: 120px;
+    color: #6d6d6d;
+    font-size: 16px;
+	border-top: 2px solid darkgray;
+}
+
+.add form{
+    gap: 20px;
+}
+
+.add-img-upload img {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #a9a9a9;
+    border-radius: 10px;
+    background-color: #ddd7d7;
+}
+
+.add-inputs {
+    width: max(60%, 280px);
+}
+
+.add-inputs input {
+    padding: 10px;   
+}
+
+.add-status select {
+    margin-top: 10px;
+    max-width: 180px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.add-btn {
+    max-width: 120px;
+    border: none;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
