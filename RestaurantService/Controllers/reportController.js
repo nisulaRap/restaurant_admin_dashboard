@@ -2,9 +2,10 @@ const PDFDocument = require('pdfkit');
 const fs = require('fs');
 const { ChartJSNodeCanvas } = require('chartjs-node-canvas');
 const path = require('path');
-const Order = require('../../OrderService/Models/orderModel');
+//const Order = require('../../OrderService/Models/orderModel');
 const Menu = require('../Models/menuModel');
 const moment = require('moment');
+const Order = require('../Models/orderModel');
 
 const width = 500;
 const height = 300;
