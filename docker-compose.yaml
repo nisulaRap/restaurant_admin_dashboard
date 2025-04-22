@@ -52,7 +52,6 @@ services:
       - "5004:5004"
     volumes:
       - ./RestaurantService:/app
-      - ./AuthService:/app/AuthService
     depends_on:
       - mongo
     restart: unless-stopped
@@ -67,7 +66,6 @@ services:
       - "7003:7003"
     volumes:
       - ./OrderService:/app
-      - ./AuthService:/app/AuthService
     depends_on:
       - mongo
     restart: unless-stopped
