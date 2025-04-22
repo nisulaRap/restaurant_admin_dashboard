@@ -63,7 +63,7 @@ services:
       context: ./OrderService
       dockerfile: Dockerfile
     ports:
-      - "7003:7003"
+      - "5000:5000"
     volumes:
       - ./OrderService:/app
     depends_on:
