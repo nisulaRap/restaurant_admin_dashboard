@@ -16,8 +16,6 @@ import RejectedResturants from "./Components/SystemAdmin/Rejected/RejectedRestur
 import Customer from "./Components/Customer/Customer";
 
 //resturnat
-//import Resturant from "./Components/Resturant/Resturant";
-//import Sidebar from "./Components/Resturant/Sidebar/Sidebar";
 import Dashboard from "./Components/Resturant/Pages/Dashboard/Dashboard";
 import Menulists from "./Components/Resturant/Pages/Menulists/Menulists";
 import AddMenu from "./Components/Resturant/Pages/AddMenu/Addmenu";
