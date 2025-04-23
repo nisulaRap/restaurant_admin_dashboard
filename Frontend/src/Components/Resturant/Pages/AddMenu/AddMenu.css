@@ -8,7 +8,7 @@
   border-top: 2px solid darkgray;
 }
 
-.add {
+.add1 {
 	margin-top: 120px;
 	border-top: 2px solid darkgray;
 	overflow-y: auto;
@@ -20,7 +20,7 @@
 }
 
 .add form{
-    gap: 20px;
+    /*gap: 20px;*/
 }
 
 .add-img-upload img {
@@ -39,8 +39,13 @@
     padding: 10px;   
 }
 
-.add-category select, .add-price input {
-    max-width: 320px;
+.add-category-price1 {
+    display: flex;
+    gap: 30px;
+}
+
+.add-category-price1 select, .add-category-price1 input {
+    max-width: 200px;
     padding: 10px;
 }
 

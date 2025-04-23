@@ -165,37 +165,39 @@ const Dashboard = () => {
 
           <div className="list-table3">
             <h3 className="order-cap">Recent Orders</h3>
-            <div className="list-table3-format title">
-              <b>Order ID</b>
-              <b>Customer ID</b>
-              <b>Menu Item x Quantity</b>
-              <b>Total Amount</b>
-              <b>Order Status</b>
-              <b>Action</b>
-            </div>
-            {orders.map((order, index) => (
-              <div key={index} className="list-table3-format">
-                <p>{order.orderId}</p>
-                <p>{order.customerId}</p>
-                <p>
-                  {order.items.map((item, itemIndex) => (
-                      <span key={itemIndex}>
-                        {item.itemName} x {item.quantity}
-                        {itemIndex !== order.items.length - 1 ? ', ' : ''}
-                      </span>
-                    ))}
-                </p>
-                <p>Rs.{order.totalAmount}</p> 
-                <p>{order.orderStatus}</p>
-                <select className="action-status" onChange={(event)=>statusHandler(event, order.orderId)} value={order.orderStatus}>
-                  <option value="Pending">Pending</option>
-                  <option value="Confirmed">Confirmed</option>
-                  <option value="Preparing">Preparing</option>
-                  <option value="ReadyToDeliver">Ready To Deliver</option>
-                  <option value="Cancelled">Cancelled</option>
-                </select>
+            <div className='table-format'>
+              <div className="list-table3-format title">
+                <b>Order ID</b>
+                <b>Customer ID</b>
+                <b>Menu Item x Quantity</b>
+                <b>Total Amount</b>
+                <b>Order Status</b>
+                <b>Action</b>
               </div>
-            ))}
+              {orders.map((order, index) => (
+                <div key={index} className="list-table3-format">
+                  <p>{order.orderId}</p>
+                  <p>{order.customerId}</p>
+                  <p>
+                    {order.items.map((item, itemIndex) => (
+                        <span key={itemIndex}>
+                          {item.itemName} x {item.quantity}
+                          {itemIndex !== order.items.length - 1 ? ', ' : ''}
+                        </span>
+                      ))}
+                  </p>
+                  <p>Rs.{order.totalAmount}</p> 
+                  <p>{order.orderStatus}</p>
+                  <select className="action-status" onChange={(event)=>statusHandler(event, order.orderId)} value={order.orderStatus}>
+                    <option value="Pending">Pending</option>
+                    <option value="Confirmed">Confirmed</option>
+                    <option value="Preparing">Preparing</option>
+                    <option value="ReadyToDeliver">Ready To Deliver</option>
+                    <option value="Cancelled">Cancelled</option>
+                  </select>
+                </div>
+              ))}
+            </div>            
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@
   margin-top: 120px;
   width: 250px;
   border-top: 2px solid darkgray;
+  min-height: 100vh;
 }
 
 .main-container {
@@ -20,7 +21,7 @@
   .main-title {
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 50px;
     font-size: 20px;
   }
@@ -29,7 +30,7 @@
     display: grid;
     grid-template-columns: 0.8fr 0.8fr 0.8fr;
     gap: 60px;
-    margin-top: 15px;
+    margin-top: 10px;
     color: white;
     margin-left: 50px;
   }
@@ -67,7 +68,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin-top: 60px;
+    margin-top: 40px;
     height: 300px;
   }
 
@@ -91,6 +92,12 @@
     margin-bottom: 20px;
   }
 
+  .table-format {
+    height: 140px;
+    width: 100%;
+    overflow-y: scroll;
+    margin-bottom: -40px;
+  }
   .list-table3-format {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 1fr 1fr 1fr;

@@ -63,7 +63,7 @@ const Addmenu = () => {
 				<Sidebar />
 			</div>
 			
-			<div className='add'>
+			<div className='add1'>
 				<h3>Add Menu</h3><br/>
 				<form className='flex-col' onSubmit={onSubmitHandler}>
 					<div className='add-img-upload flex-col'>
@@ -110,34 +110,37 @@ const Addmenu = () => {
 							required
 						></textarea>
 					</div>
-					<div className='add-category flex-col'>
+					<div className='add-category-price1'>
+						<div className='add-category flex-col'>
 							<p>Category</p>
-							<select 
-								onChange={onChangeHandler} 
-								value={data.category} 
-								name='category' 
-								required
+							<select
+							name='category'
+							value={data.category || ''}
+							onChange={onChangeHandler}
+							required
 							>
-								<option value=''>Select Category</option>
-								<option value='Sides'>Sides</option>
-								<option value='Pizza'>Pizza</option>
-								<option value='Dessert'>Dessert</option>
-								<option value='Beverage'>Beverage</option>
-								<option value='Soup'>Soup</option>
-								<option value='Dish'>Dish</option>
+							<option value=''>Select Category</option>
+							<option value='Sides'>Sides</option>
+							<option value='Pizza'>Pizza</option>
+							<option value='Dessert'>Dessert</option>
+							<option value='Beverage'>Beverage</option>
+							<option value='Soup'>Soup</option>
+							<option value='Dish'>Dish</option>
 							</select>
 						</div>
+
 						<div className='add-price flex-col'>
 							<p>Price (Rs.)</p>
-							<input 
-								onChange={onChangeHandler} 
-								value={data.price} 
-								type='number' 
-								name='price' 
-								placeholder='Enter Price' 
-								required 
+							<input
+							type='number'
+							name='price'
+							placeholder='Enter Price'
+							value={data.price || ''}
+							onChange={onChangeHandler}
+							required
 							/>
 						</div>
+					</div>
 					<button type='submit' className='add-btn'>Add Menu</button>
 				</form>
 			</div>
