@@ -10,7 +10,7 @@ const Sidebar = () => {
   return (
     <div className='sidebar'>
       <div className='options'>
-      <NavLink to='/ResturantAdmin' className='sidebar-option'>
+        <NavLink to='/ResturantAdmin' className='sidebar-option'>
           <img className='dashboard' src={assets.dashboard_icon} alt='' />
           <p>Dashboard</p>
         </NavLink>

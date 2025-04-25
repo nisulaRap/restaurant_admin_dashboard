@@ -1,20 +1,29 @@
-.layout {
-  display: flex;
+.layout8 {
+    display: flex;
 }
 
-.bar {
-  margin-top: 120px;
-  width: 250px;
-  border-top: 2px solid darkgray;
+.bar8 {
+    margin-top: 120px;
+    width: 250px;
+    border-top: 2px solid darkgray;
 }
 
-div.order-list {
+.order-add {
+    margin-top: 120px;
+    overflow-y: auto;
+    width: 70%;
+    margin-left: max(5vw, 25px);
+    color: #6d6d6d;
+    font-size: 16px;
+}
+
+.order-list {
     height: 85vh;
-    width: 100;
+    width: 100%;
     overflow-y: scroll;
 }
 
-.order-item{
+.order-item {
     display: grid;
     grid-template-columns: 0.5fr 1.8fr 1.4fr 0.6fr 1fr;
     align-items: start;
@@ -26,25 +35,26 @@ div.order-list {
     color: #505050;
 }
 
-.parcel-icon{
+.parcel-icon {
     width: 60px;
     height: 60px;
 }
 
-.order-item-food, .order-item-name{
+.order-item-food,
+.order-item-name {
     font-weight: 600;
 }
 
-.order-item-name{
+.order-item-name {
     margin-top: 30px;
     margin-bottom: 5px;
 }
 
-.order-item-address{
+.order-item-address {
     margin-bottom: 10px;
 }
 
-.order-item select{
+.order-item select {
     background-color: #ffe8e4;
     border: 1px solid tomato;
     width: max(10vw, 120px);
@@ -62,17 +72,81 @@ div.order-list {
     cursor: pointer;
 }
 
-@media (max-width:1000px){
-    .order-item{
+/* Large desktop (1200px and up) */
+@media (min-width: 1200px) {
+    .order-item {
+        gap: 25px;
+        padding: 18px;
+    }
+
+    .parcel-icon {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/* Small desktop (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .order-item {
+        grid-template-columns: 0.5fr 1.6fr 1.2fr 0.6fr 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .parcel-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .order-add {
+        width: 65%;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .order-item {
+        grid-template-columns: 0.5fr 2fr 1fr;
+        gap: 15px;
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+
+    .parcel-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .order-add {
+        width: 60%;
+        font-size: 14px;
+    }
+
+    .order-item select {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .download-btn {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+}
+
+/* Mobile (below 768px) */
+@media (max-width: 767px) {
+    .order-item {
         font-size: 12px;
         grid-template-columns: 0.5fr 2fr 1fr;
         padding: 15px 8px;
     }
-    .order-item select{
+
+    .order-item select {
         padding: 5px;
         font-size: 12px;
     }
-    .order-item img{
+
+    .order-item img {
         width: 40px;
     }
 }

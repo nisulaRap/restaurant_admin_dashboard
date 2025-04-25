@@ -1,26 +1,30 @@
-.layout {
-  display: flex;
+.layout5 {
+    display: flex;
 }
 
-.bar {
-  margin-top: 120px;
-  width: 250px;
-  border-top: 2px solid darkgray;
+.bar5 {
+    margin-top: 120px;
+    width: 250px;
+    border-top: 2px solid darkgray;
 }
 
-.add {
+.update2 {
+    margin-top: 120px;
     width: 70%;
     margin-left: max(5vw, 25px);
-    margin-top: 50px;
     color: #6d6d6d;
     font-size: 16px;
 }
 
-.add form{
+.update2 form {
     gap: 20px;
+    width: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    margin-left: 250px;
 }
 
-.add-img-upload img {
+.update-img-upload2 img {
     width: 120px;
     height: 120px;
     border: 1px solid #a9a9a9;
@@ -28,25 +32,28 @@
     background-color: #ddd7d7;
 }
 
-.add-product-name, .add-product-description {
+.update-product-name,
+.update-product-description {
     width: max(40%, 280px);
 }
 
-.add-product-name input, .add-product-description textarea{
-    padding: 10px;   
+.update-product-name input,
+.update-product-description textarea {
+    padding: 10px;
 }
 
-.add-category-price {
+.update-category-price {
     display: flex;
     gap: 30px;
 }
 
-.add-category-price select, .add-category-price input {
+.update-category-price select,
+.update-category-price input {
     max-width: 120px;
     padding: 10px;
 }
 
-.add-btn {
+.update-btn2 {
     max-width: 120px;
     border: none;
     padding: 10px;
@@ -54,4 +61,75 @@
     color: white;
     cursor: pointer;
     border-radius: 10px;
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+    .layout5 {
+        flex-direction: column;
+    }
+
+    .bar5 {
+        width: 100%;
+        margin-top: 80px;
+    }
+
+    .update2 {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .update2 form {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .update-product-name,
+    .update-product-description {
+        width: 100%;
+    }
+
+    .update-category-price {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .update-category-price select,
+    .update-category-price input {
+        max-width: 100%;
+    }
+}
+
+/* Small Desktop (992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .update2 {
+        width: 80%;
+    }
+
+    .update2 form {
+        width: 80%;
+        margin-left: 150px;
+    }
+
+    .update-product-name,
+    .update-product-description {
+        width: 80%;
+    }
+}
+
+/* Large Desktop (1200px) */
+@media (min-width: 1200px) {
+    .update2 {
+        width: 60%;
+    }
+
+    .update2 form {
+        width: 500px;
+        margin-left: 300px;
+    }
+
+    .update-product-name,
+    .update-product-description {
+        width: 50%;
+    }
 }

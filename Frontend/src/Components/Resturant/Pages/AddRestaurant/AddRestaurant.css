@@ -1,27 +1,30 @@
-.layout {
-  display: flex;
+.layout2 {
+    display: flex;
 }
 
-.bar {
-  margin-top: 120px;
-  width: 250px;
-  border-top: 2px solid darkgray;
+.bar2 {
+    margin-top: 120px;
+    width: 250px;
+    border-top: 2px solid darkgray;
 }
 
-.add {
+.add1 {
     width: 70%;
     margin-left: max(5vw, 25px);
     margin-top: 120px;
     color: #6d6d6d;
     font-size: 16px;
-	border-top: 2px solid darkgray;
 }
 
-.add form{
+.add1 form {
     gap: 20px;
+    width: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    margin-left: 250px;
 }
 
-.add-img-upload img {
+.add-img-upload1 img {
     width: 120px;
     height: 120px;
     border: 1px solid #a9a9a9;
@@ -29,22 +32,22 @@
     background-color: #ddd7d7;
 }
 
-.add-inputs {
+.add-inputs1 {
     width: max(60%, 280px);
 }
 
-.add-inputs input {
-    padding: 10px;   
+.add-inputs1 input {
+    padding: 10px;
 }
 
-.add-status select {
+.add-status1 select {
     margin-top: 10px;
     max-width: 180px;
     padding: 10px;
     margin-bottom: 10px;
 }
 
-.add-btn {
+.add-btn1 {
     max-width: 120px;
     border: none;
     padding: 10px;
@@ -52,4 +55,57 @@
     color: white;
     cursor: pointer;
     border-radius: 10px;
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+    .layout2 {
+        flex-direction: column;
+    }
+    
+    .bar2 {
+        width: 100%;
+        margin-top: 80px;
+    }
+    
+    .add1 {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 40px;
+    }
+    
+    .add1 form {
+        width: 90%;
+        margin-left: 0;
+    }
+    
+    .add-inputs1 {
+        width: 100%;
+    }
+}
+
+/* Small Desktop (992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .add1 {
+        width: 80%;
+        margin-left: max(4vw, 20px);
+    }
+    
+    .add1 form {
+        width: 450px;
+        margin-left: 200px;
+    }
+}
+
+/* Large Desktop (1200px) */
+@media (min-width: 1200px) {
+    .add1 {
+        width: 75%;
+        margin-left: max(6vw, 30px);
+    }
+    
+    .add1 form {
+        width: 500px;
+        margin-left: 300px;
+    }
 }

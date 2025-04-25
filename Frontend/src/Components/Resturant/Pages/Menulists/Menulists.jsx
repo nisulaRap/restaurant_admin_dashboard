@@ -73,58 +73,58 @@ const Menulists = () => {
   }, []);
 
   return (
-	<div className='layout'>
-		<div className='bar'>
-			<Sidebar />
-		</div>
-		
-		<div className="list add flex-col">
-		  <h3>Menu Lists</h3>
+    <div className='layout7'>
+      <div className='bar7'>
+        <Sidebar />
+      </div>
 
-		  {/* Search Bar */}
-		  <div className="search-bar">
-			<input
-			  type="text"
-			  placeholder="Search by name, menu ID, category, or restaurant ID..."
-			  value={search}
-			  onChange={(e) => setSearch(e.target.value)}
-			/>
-			<button onClick={searchFood}>Search</button>
-		  </div>
+      <div className="list-add2 flex-col">
+        <h3>Menu Lists</h3>
 
-		  {notFound && (
-			<p style={{ color: 'red', marginTop: '10px' }}>{notFound}</p>
-		  )}
+        {/* Search Bar */}
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search by name, menu ID, category, or restaurant ID..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <button onClick={searchFood}>Search</button>
+        </div>
 
-		  {/* Table */}
-		  <div className="list-table">
-			<div className="list-table-format title">
-			  <b>Menu ID</b>
-			  <b>Image</b>
-			  <b>Menu Name</b>
-			  <b>Category</b>
-			  <b>Price</b>
-			  <b>Restaurant ID</b>
-			  <b>Action</b>
-			</div>
-			{list.map((item, index) => (
-			  <div key={index} className="list-table-format">
-				<p>{item.menuId}</p>
-				<img className="menuImage" src={`${url}/images/${item.image}`} alt={item.name} />
-				<p>{item.name}</p>
-				<p>{item.category}</p>
-				<p>Rs. {item.price}</p>
-				<p>{item.restaurantId}</p>
-				<div className='list-coloumn'>
-				  <p className="cursor1" onClick={() => navigate(`/update/${item._id}`)}>Update</p>
-				  <p className="cursor2" onClick={() => deleteMenu(item._id)}>Delete</p>
-				</div>
-			  </div>
-			))}
-		  </div>
-		</div>
-	</div>
-    
+        {notFound && (
+          <p style={{ color: 'red', marginTop: '10px' }}>{notFound}</p>
+        )}
+
+        {/* Table */}
+        <div className="list-table">
+          <div className="list-table-format title">
+            <b>Menu ID</b>
+            <b>Image</b>
+            <b>Menu Name</b>
+            <b>Category</b>
+            <b>Price</b>
+            <b>Restaurant ID</b>
+            <b>Action</b>
+          </div>
+          {list.map((item, index) => (
+            <div key={index} className="list-table-format">
+              <p>{item.menuId}</p>
+              <img className="menuImage" src={`${url}/images/${item.image}`} alt={item.name} />
+              <p>{item.name}</p>
+              <p>{item.category}</p>
+              <p>Rs. {item.price}</p>
+              <p>{item.restaurantId}</p>
+              <div className='list-coloumn'>
+                <p className="cursor1" onClick={() => navigate(`/update/${item._id}`)}>Update</p>
+                <p className="cursor2" onClick={() => deleteMenu(item._id)}>Delete</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
   );
 };
 

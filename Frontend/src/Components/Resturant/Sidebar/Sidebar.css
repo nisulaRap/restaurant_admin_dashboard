@@ -2,7 +2,7 @@
     min-height: 100vh;
     border: 1.5px solid #a9a9a9;
     border-top: 0;
-    font-size: max(1vw, 10px);
+    font-size: 10px;
     background-color: lightgray;
     height: 100vh;
 }
@@ -26,7 +26,7 @@
     cursor: pointer;
 }
 
-.dashboard{
+.dashboard {
     width: 30px;
     height: 30px;
 }
@@ -51,9 +51,41 @@
     border-color: tomato;
 }
 
-@media (max-width: 900px) {
-    .sidebar-option p{
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    .sidebar-option p {
         display: none;
+    }
+
+    .options {
+        padding-left: 10%;
+        gap: 15px;
     }
 }
 
+/* Small desktop (between 769px and 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .sidebar-option p {
+        font-size: 0.9rem;
+    }
+
+    .options {
+        padding-left: 12%;
+        gap: 18px;
+    }
+}
+
+/* Large desktop (1200px and above) */
+@media (min-width: 1200px) {
+    .sidebar-option p {
+        font-size: 1.1rem;
+    }
+
+    .options {
+        padding-left: 20%;
+    }
+
+    .sidebar-option {
+        padding: 10px 12px;
+    }
+}

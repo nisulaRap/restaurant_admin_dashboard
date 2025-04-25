@@ -12,10 +12,10 @@ const UpdateRestaurant = () => {
     const url = 'http://localhost:5004';
 
     const [data, setData] = useState({
-        restaurantName: '', 
-        restaurantLocation: '', 
-        lat: '', 
-        lng: '', 
+        restaurantName: '',
+        restaurantLocation: '',
+        lat: '',
+        lng: '',
         status: ''
     });
 
@@ -87,84 +87,84 @@ const UpdateRestaurant = () => {
         }
     };
 
-  return (
-	<div className='layout'>
-		<div className='bar'>
-			<Sidebar />
-		</div>
-	  
-		<div className='add'>
-			<h3>Update Restaurant</h3><br />
-			<form onSubmit={onSubmitHandler}>
-				<div className='add-img-upload flex-col'>
-					<p>Upload Image</p>
-					<label htmlFor='image'>
-						<img
-							src={newImage ? URL.createObjectURL(newImage) : currentImage ? `${url}/images/${currentImage}` : assets.upload_icon }
-							alt="Restaurant" />
-					</label>
-					<input 
-						type='file'
-						id='image'
-						onChange={(e) => setNewImage(e.target.files[0])}
-						hidden
-					/>
-				</div>
+    return (
+        <div className='layout4'>
+            <div className='bar4'>
+                <Sidebar />
+            </div>
 
-				<div className='add-inputs flex-col'>
-					<p>Restaurant Name</p>
-					<input
-						type='text'
-						name='restaurantName'
-						value={data.restaurantName || ''}
-						placeholder='Enter Restaurant Name'
-						onChange={onChangeHandler}
-						required
-					/>
+            <div className='update1'>
+                <h3>Update Restaurant</h3><br />
+                <form onSubmit={onSubmitHandler}>
+                    <div className='update-img-upload1 flex-col'>
+                        <p>Upload Image</p>
+                        <label htmlFor='image'>
+                            <img
+                                src={newImage ? URL.createObjectURL(newImage) : currentImage ? `${url}/images/${currentImage}` : assets.upload_icon}
+                                alt="Restaurant" />
+                        </label>
+                        <input
+                            type='file'
+                            id='image'
+                            onChange={(e) => setNewImage(e.target.files[0])}
+                            hidden
+                        />
+                    </div>
 
-					<p>Restaurant Location</p>
-					<input
-						type='text'
-						name='restaurantLocation'
-						value={data.restaurantLocation || ''}
-						placeholder='Enter Restaurant Location'
-						onChange={onChangeHandler}
-						required
-					/>
+                    <div className='update-inputs flex-col'>
+                        <p>Restaurant Name</p>
+                        <input
+                            type='text'
+                            name='restaurantName'
+                            value={data.restaurantName || ''}
+                            placeholder='Enter Restaurant Name'
+                            onChange={onChangeHandler}
+                            required
+                        />
 
-					<p>Restaurant Latitude and Longitude</p>
-					<input 
-						type="text" 
-						placeholder='Latitude' 
-						name='lat' 
-						value={data.lat} 
-						onChange={onChangeHandler} 
-						required 
-					/>
-					<input 
-						type="text" 
-						placeholder='Longitude' 
-						name='lng' 
-						value={data.lng} 
-						onChange={onChangeHandler} 
-						required 
-					/>
-				</div><br />
+                        <p>Restaurant Location</p>
+                        <input
+                            type='text'
+                            name='restaurantLocation'
+                            value={data.restaurantLocation || ''}
+                            placeholder='Enter Restaurant Location'
+                            onChange={onChangeHandler}
+                            required
+                        />
 
-				<p>Restaurant Status</p>
-				<div className='add-status flex-col'>
-					<select name='status' value={data.status || ''} onChange={onChangeHandler} required>
-						<option value=''>Select Status</option>
-						<option value='Opened'>Opened</option>
-						<option value='Closed'>Closed</option>
-					</select>
-				</div>
+                        <p>Restaurant Latitude and Longitude</p>
+                        <input
+                            type="text"
+                            placeholder='Latitude'
+                            name='lat'
+                            value={data.lat}
+                            onChange={onChangeHandler}
+                            required
+                        />
+                        <input
+                            type="text"
+                            placeholder='Longitude'
+                            name='lng'
+                            value={data.lng}
+                            onChange={onChangeHandler}
+                            required
+                        />
+                    </div><br />
 
-				<button type='submit' className='update-btn'>Update Restaurant</button>
-			</form>
-		</div>
-	</div>
-  )
+                    <p>Restaurant Status</p>
+                    <div className='update-status flex-col'>
+                        <select name='status' value={data.status || ''} onChange={onChangeHandler} required>
+                            <option value=''>Select Status</option>
+                            <option value='Opened'>Opened</option>
+                            <option value='Closed'>Closed</option>
+                        </select>
+                    </div>
+
+                    <button type='submit' className='update-btn1'>Update Restaurant</button>
+                </form>
+            </div>
+        </div>
+    )
 };
 
 export default UpdateRestaurant

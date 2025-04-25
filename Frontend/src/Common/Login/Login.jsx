@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { AuthContext } from '../../Context/AuthContext';
 import { jwtDecode } from 'jwt-decode';
+import './Login.css'
 
 function Login() {
 
@@ -43,23 +44,25 @@ function Login() {
     }
 
     return (
-        <div className='form-container'>
-            <div className='form-card'>
-                <h1>Login</h1>
+        <div className='login-wrapper'>
+            <div className='form-container'>
+                <div className='form-card'>
+                    <h1>Login</h1>
 
-                <form onSubmit={loginForm}>
-                    <label>Name</label>
-                    <input type='text'
-                        value={name}
-                        onChange={(e) => setName(e.target.value)} /> <br /><br />
+                    <form onSubmit={loginForm}>
+                        <label>Name</label>
+                        <input type='text'
+                            value={name}
+                            onChange={(e) => setName(e.target.value)} /> <br /><br />
 
-                    <label>Password</label>
-                    <input type='password'
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)} /> <br /><br />
+                        <label>Password</label>
+                        <input type='password'
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)} /> <br /><br />
 
-                    <button type='submit'>Login</button>
-                </form>
+                        <button type='submit'>Login</button>
+                    </form>
+                </div>
             </div>
         </div>
     )

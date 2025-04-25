@@ -38,7 +38,7 @@ function Header() {
                     <FaShoppingCart size={30} color="black" />
                     <div className='search-container'>
                         <FaSearch size={30} color='black' />
-                        <input type='text' className='search-bar' placeHolder='Search...' />
+                        <input type='text' className='search-bar-h' placeHolder='Search...' />
                     </div>
 
                 </ul>
